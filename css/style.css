@@ -22,10 +22,29 @@ body {
 @media screen and (min-width: 60.5rem) {
   body {
     padding-bottom: 0;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
     background-image: url("../images/hero-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+    background-size: cover;
   }
 }
 
@@ -72,12 +91,6 @@ header .logo {
     max-width: 75rem;
     min-height: calc(100vh - 123px);
   }
-}
-.hero__content {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 0 0.5rem 0.5rem 0;
-  padding: 1rem 1rem 1rem 0;
-  z-index: 999;
 }
 @media screen and (min-width: 60.5rem) {
   .hero__content {

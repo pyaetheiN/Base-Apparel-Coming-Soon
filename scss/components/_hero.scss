@@ -23,11 +23,6 @@
   }
 
   &__content{
-    // adding background in case of collision with background image
-    background-color: rgb(#fff, 0.85);
-    border-radius: 0 rem(8) rem(8) 0 ;
-    padding: 1rem 1rem 1rem 0;
-    z-index: 999;
     
     @include lg-min{
       max-width: rem(360);

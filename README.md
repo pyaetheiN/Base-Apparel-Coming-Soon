@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/desktop-preview.png)
+![](./screenshots/mobile-preview.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-dtif4v84EI/
+- Live Site URL: https://pyaethein.github.io/Base-Apparel-Coming-Soon/
 
 ## My process
 
@@ -49,26 +49,36 @@ Users should be able to:
 ### Challenges
 
 - background image was a bit tricky
-- added safety measures for hero content (scss line 26)
 
 ```css
 body{
 
   @include lg-min{
-    padding-bottom: 0;
-    background-image: url("../images/hero-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-  }
-}
+    position: relative;
 
-.hero__content{
-  /* adding background in case of collision with background image */
-  background-color: rgb(#fff, 0.85);
-  border-radius: 0 rem(8) rem(8) 0 ;
-  padding: 1rem 1rem 1rem 0;
-  z-index: 999;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 55%;
+      height: 100%;
+      background-image: url("../images/bg-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+      background-image: url("../images/hero-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 ```
 
