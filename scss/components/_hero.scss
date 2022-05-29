@@ -1,0 +1,195 @@
+@use '../abstracts' as *;
+
+.hero{
+  text-align: center;
+
+  @include lg-min{
+    text-align: initial;
+    max-width: rem(968);
+    margin: 0 auto;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 75px);
+    transform: translateY(-5%);
+
+    &__img{
+      display: none;
+    }
+  }
+  @include xl-min{
+    max-width: rem(1200);
+    min-height: calc(100vh - 123px);
+  }
+
+  &__content{
+    // adding background in case of collision with background image
+    background-color: rgb(#fff, 0.85);
+    border-radius: 0 rem(8) rem(8) 0 ;
+    padding: 1rem 1rem 1rem 0;
+    z-index: 999;
+    
+    @include lg-min{
+      max-width: rem(360);
+    }
+    @include xl-min{
+      max-width: rem(400);
+    }
+  }
+
+  &__title{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: rem(10);
+    margin-top: 3rem;
+    color: $dark-grayish-red;
+
+    &--red{
+      color: $desaturated-red;
+      font-weight: 300;
+    }
+
+    @include lg-min{
+      font-size: 3.3em;
+      margin: 0;
+    }
+    @include xl-min{
+      font-size: 4em;
+    }
+  }
+  &__desc{
+    margin: 1rem 1rem 1.5rem;
+    font-size: 1em;
+    line-height: 1.4;
+    color: $desaturated-red;
+
+    @include lg-min{
+      margin: 1rem 0 2rem;
+      font-size: 0.8125em;
+      line-height: 1.5;
+    }
+    @include xl-min{
+      font-size: 0.9125em;
+    }
+  }
+}
+
+.form{
+  display: inline-flex;
+  align-items: center;
+  width: clamp(250px, 90vw, 350px);
+  position: relative;
+
+  &__input{
+    flex: 1;
+    border: none;
+    border: 2px solid rgb($desaturated-red, 0.3);
+    border-radius: rem(25);
+    padding: 0.5rem 6.5rem 0.5rem 1rem;
+    font-size: 1em;
+    height: rem(40);
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s;
+
+    @include lg-min{
+      font-size: 0.8125em;
+      height: rem(35);
+    }
+    @include xl-min{
+      font-size: 0.9125em;
+    }
+
+    &:focus{
+      outline: none;
+      border: 2px solid rgb($desaturated-red, 0.6);
+    }
+    &::placeholder{
+      color: rgb($desaturated-red, 0.5);
+    }
+    &--error{
+      border: 2px solid $soft-red;
+    }
+  }
+  &__btn{
+    border: none;
+    background: $gradient2;
+    width: rem(55);
+    height: rem(40);
+    border-radius: rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+    @include lg-min{
+      width: rem(60);
+      height: rem(35);
+    }
+
+    &--arrow{
+      width: rem(12);
+      height: rem(20);
+      transform: scale(0.8);
+    }
+    &:hover{
+      background: $btnhover;
+      transform: scale(1.1);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+  }
+  &__error-icon{
+    position: absolute;
+    width: rem(20);
+    height: rem(20);
+    top: 0.5rem;
+    right: 4.5rem;
+    display: none;
+  }
+  &__error-msg{
+    position: absolute;
+    top: 3rem;
+    left: 1.15rem;
+    font-size: 1em;
+    color: $soft-red;
+    display: none;
+
+    @include lg-min{
+      top: 2.7rem;
+      font-size: 0.8125em;
+    }
+    @include xl-min{
+      font-size: 0.9125em;
+    }
+  }
+  &__redirect{
+    display: inline-flex;
+    align-items: center;
+    gap: rem(5);
+
+    &--text{
+      transform: translateY(2px);
+      color: $dark-grayish-red;
+    }
+    &--icon{
+      transform: scale(0.7);
+
+      svg{
+        width: rem(24);
+        height: rem(24);
+        transform: rotate(180deg);
+      }
+    }
+    &:hover{
+
+      .form__redirect--text{
+        text-decoration: underline;
+      }
+    }
+  }
+}

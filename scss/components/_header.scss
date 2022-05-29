@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+header{
+  padding: 1.5rem;
+  
+  .logo{
+    width: clamp(rem(100), 15vw, rem(110));
+  }
+  @include lg-min{
+    max-width: rem(968);
+    margin: 0 auto;
+    padding: 1.5rem 2.5rem;
+  }
+  @include xl-min{
+    max-width: rem(1200);
+    padding: 3rem 1.5rem;
+  }
+}
