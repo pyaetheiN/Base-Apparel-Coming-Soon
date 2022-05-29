@@ -56,17 +56,6 @@ body{
   @include lg-min{
     position: relative;
 
-    &::before{
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 55%;
-      height: 100%;
-      background-image: url("../images/bg-pattern-desktop.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     &::after{
       content: '';
       position: absolute;
@@ -75,6 +64,24 @@ body{
       width: 45%;
       height: 100%;
       background-image: url("../images/hero-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+main{
+  @include lg-min{
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 55%;
+      height: 100%;
+      background-image: url("../images/bg-pattern-desktop.svg");
       background-repeat: no-repeat;
       background-size: cover;
     }
