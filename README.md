@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/mobile-preview.png)
+![](./screenshots/desktop-preview.png)
 
 ### Links
 
@@ -49,6 +49,7 @@ Users should be able to:
 ### Challenges
 
 - background image was a bit tricky
+- encountered a bug in which header disappears when `::before` pseudo-element is applied to `body` tag so I used `::before` on `main` tag and the bug goes away
 
 ```css
 body{
@@ -71,6 +72,7 @@ body{
 }
 
 main{
+
   @include lg-min{
     position: relative;
 

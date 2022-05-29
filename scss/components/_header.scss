@@ -4,12 +4,12 @@ header{
   padding: 1.5rem;
   
   .logo{
-    width: clamp(rem(100), 15vw, rem(110));
+    width: clamp(rem(100), 15vw, rem(130));
   }
   @include lg-min{
     max-width: rem(968);
     margin: 0 auto;
-    padding: 1.5rem 2.5rem;
+    padding: 2rem 2.5rem;
   }
   @include xl-min{
     max-width: rem(1200);

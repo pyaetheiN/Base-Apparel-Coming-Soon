@@ -10,7 +10,7 @@
     padding: 1.5rem 2.5rem;
     display: flex;
     align-items: center;
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 95px);
     transform: translateY(-5%);
 
     &__img{
@@ -19,7 +19,8 @@
   }
   @include xl-min{
     max-width: rem(1200);
-    min-height: calc(100vh - 123px);
+    padding: 1.5rem;
+    min-height: calc(100vh - 127px);
   }
 
   &__content{
@@ -92,6 +93,7 @@
       height: rem(35);
     }
     @include xl-min{
+      height: rem(50);
       font-size: 0.9125em;
     }
 
@@ -125,6 +127,13 @@
     @include lg-min{
       width: rem(60);
       height: rem(35);
+    }
+
+    @include xl-min{
+      width: rem(75);
+      height: rem(50);
+      font-size: 0.9125em;
+      border-radius: rem(25);
     }
 
     &--arrow{
