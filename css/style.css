@@ -101,12 +101,12 @@ header .logo {
 }
 @media screen and (min-width: 60.5rem) {
   .hero__content {
-    max-width: 22.5rem;
+    max-width: 23.75rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .hero__content {
-    max-width: 25rem;
+    max-width: 26.25rem;
   }
 }
 .hero__title {
@@ -141,21 +141,26 @@ header .logo {
 @media screen and (min-width: 60.5rem) {
   .hero__desc {
     margin: 1rem 0 2rem;
-    font-size: 0.8125em;
+    font-size: 0.875em;
     line-height: 1.5;
   }
 }
 @media screen and (min-width: 75rem) {
   .hero__desc {
-    font-size: 0.9125em;
+    font-size: 0.975em;
   }
 }
 
 .form {
   display: inline-flex;
   align-items: center;
-  width: clamp(250px, 90vw, 350px);
+  width: clamp(250px, 90vw, 380px);
   position: relative;
+}
+@media screen and (min-width: 75rem) {
+  .form {
+    width: clamp(250px, 90vw, 420px);
+  }
 }
 .form__input {
   flex: 1;
@@ -170,14 +175,14 @@ header .logo {
 }
 @media screen and (min-width: 60.5rem) {
   .form__input {
-    font-size: 0.8125em;
-    height: 2.1875rem;
+    font-size: 0.875em;
+    height: 2.8125rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .form__input {
     height: 3.125rem;
-    font-size: 0.9125em;
+    font-size: 0.975em;
   }
 }
 .form__input:focus {
@@ -214,16 +219,16 @@ header .logo {
 }
 @media screen and (min-width: 60.5rem) {
   .form__btn {
-    width: 3.75rem;
-    height: 2.1875rem;
+    width: 4.6875rem;
+    height: 2.8125rem;
+    border-radius: 1.5625rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .form__btn {
-    width: 4.6875rem;
+    width: 5rem;
     height: 3.125rem;
     font-size: 0.9125em;
-    border-radius: 1.5625rem;
   }
 }
 .form__btn--arrow {
@@ -240,9 +245,20 @@ header .logo {
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
-  top: 0.5rem;
+  top: 0.65rem;
   right: 4.5rem;
   display: none;
+}
+@media screen and (min-width: 60.5rem) {
+  .form__error-icon {
+    top: 0.8rem;
+    right: 5.5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .form__error-icon {
+    top: 0.9rem;
+  }
 }
 .form__error-msg {
   position: absolute;
@@ -254,7 +270,7 @@ header .logo {
 }
 @media screen and (min-width: 60.5rem) {
   .form__error-msg {
-    top: 2.7rem;
+    top: 3.5rem;
     font-size: 0.8125em;
   }
 }
